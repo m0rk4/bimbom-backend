@@ -1,0 +1,15 @@
+### Java ###
+build/
+classes/
+
+### Gradle ###
+.gradle
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea
+*.iml
+
+### Idea-created folder for resources ###
+out/

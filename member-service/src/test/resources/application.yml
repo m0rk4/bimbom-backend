@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    discovery:
+      enabled: false
+
+server:
+  port: 9200
+  address: localhost
+
+eureka:
+  client:
+    enabled: false

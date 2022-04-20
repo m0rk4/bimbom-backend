@@ -1,0 +1,12 @@
+server:
+  port: 9761
+  address: localhost
+
+logging:
+  level:
+    ROOT: WARN
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

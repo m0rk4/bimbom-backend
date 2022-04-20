@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: member-service
+          uri: lb://member-service
+          predicates:
+            - Path=/member/**
+          filters:
+            - RewritePath=/member(?<segment>/?.*), $\{segment}
+
+server:
+  port: 8100
+  address: localhost
+  shutdown: graceful
+
+eureka:
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${eureka.instance.hostname}:${server.port}
+

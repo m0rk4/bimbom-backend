@@ -1,5 +1,5 @@
 plugins {
-    id("web-client-common-conventions")
+    id("resource-server-common-conventions")
 }
 
 dependencies {

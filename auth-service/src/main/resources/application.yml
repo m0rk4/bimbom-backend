@@ -1,14 +1,9 @@
 spring:
   application:
-    name: member-service
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: http://localhost:8201/.well-known/jwks.json
+    name: auth-service
 
 server:
-  port: 8200
+  port: 8201
   address: localhost
   shutdown: graceful
 
@@ -20,3 +15,9 @@ eureka:
   instance:
     hostname: localhost
     instance-id: ${spring.application.name}:${eureka.instance.hostname}:${server.port}
+
+custom:
+  key-store: classpath:keystore.jks
+  key-store-password: spasswd
+  key-pair-alias: keypair
+  key-pair-password: kpasswd

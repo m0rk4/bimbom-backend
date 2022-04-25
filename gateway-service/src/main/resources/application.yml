@@ -4,12 +4,12 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: member-service
-          uri: lb://member-service
+        - id: app-service
+          uri: lb://app-service
           predicates:
-            - Path=/member/**
+            - Path=/app/**
           filters:
-            - RewritePath=/member(?<segment>/?.*), $\{segment}
+            - RewritePath=/app(?<segment>/?.*), $\{segment}
         - id: auth-service
           uri: lb://auth-service
           predicates:

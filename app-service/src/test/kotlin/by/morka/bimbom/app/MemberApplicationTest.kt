@@ -1,4 +1,4 @@
-package by.morka.bimbom.member
+package by.morka.bimbom.app
 
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test

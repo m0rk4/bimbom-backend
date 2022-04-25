@@ -1,11 +1,18 @@
 spring:
   application:
-    name: member-service
+    name: app-service
   security:
     oauth2:
       resourceserver:
         jwt:
           jwk-set-uri: http://localhost:8201/.well-known/jwks.json
+  datasource:
+    url: jdbc:postgresql://localhost/bimbom
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-app.xml
 
 server:
   port: 8200
